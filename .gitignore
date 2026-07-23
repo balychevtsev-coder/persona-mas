@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Personal user data (NEVER commit real profiles)
+user_profile.json
+!user_profile.example.json
+
+# Agent configs with real personal data (only *_example.md templates are committed)
+agents/configs/bio_agent.md
+agents/configs/cultural_agent.md
+agents/configs/financial_agent.md
+agents/configs/general_agent.md
+agents/configs/psychologist_agent.md
+
+# Secure storage (encrypted sessions & private records)
+storage/secure/*
+!storage/secure/.gitkeep
+!storage/secure/*.example.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

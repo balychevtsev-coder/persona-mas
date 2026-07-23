@@ -1,0 +1,8 @@
+aiogram
+langgraph
+langchain-ollama
+langchain-openai
+pydantic
+rich
+cryptography
+python-dotenv

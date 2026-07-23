@@ -1,0 +1,32 @@
+# CURSOR RULES: PERSONA MULTI-AGENT SYSTEM (MAS)
+
+## SYSTEM ARCHITECTURE & STACK
+- **Language**: Python 3.11+ (Strict async/await paradigm).
+- **Package Manager**: `uv` (for ultra-fast dependency management).
+- **Orchestration**: LangGraph (for deterministic state management, loops, and routing).
+- **Interface**: `aiogram` (Asynchronous Telegram Bot API).
+- **Local Inference**: Ollama (`llama3.1:8b`, `mistral-large` or compatible tool-calling models).
+- **Embeddings**: Local `nomic-embed-text` via Ollama.
+- **Storage**: SQLite (for operational state, short-term history, and secure logs).
+
+## CORE PATH STRUCTURE
+- `/core/`: Orchestrator logic, LangGraph state machine, DB connection manager.
+- `/agents/`: Agent implementations.
+- `/agents/configs/`: System prompts and configuration files (`cultural_agent.md`, etc.).
+- `/tools/`: Custom Python tools (web search, financial calculators, PDF parsers).
+- `/bot/`: Telegram bot handlers and middleware.
+- `/storage/secure/`: Highly restricted local encrypted SQLite and memory files.
+
+## DATA INGESTION RULES
+1. **Context Initialization**: Every session execution must fetch general context from `/user_profile.json` dynamically via Python. Do not hardcode user traits into python scripts.
+2. **Prompt Injection**: Agents must load their structural roles and identities from `/agents/configs/`.
+
+## CRITICAL SAFETY RULE: PSYCHOLOGIST ISOLATION
+- The directory `/storage/secure/` and file `psychologist_context.md` contain strict, private therapeutic and psychological data.
+- **No Agent except the 'Personal Confidant' (Psychologist)** has read or write access to this data.
+- The Orchestrator (Router) must blindly forward the text to the Psychologist agent without inspecting or logging the conversation history of this node into the global shared memory.
+
+## CODE GENERATION GUIDELINES
+- Always write explicit type hints: `async def handle_request(state: AgentState) -> dict:`.
+- Ensure robust `try-except` blocks around Ollama JSON parsing, providing custom Output Parsers to fallback gracefully if local LLM fails to structure its response.
+- Use `rich` library for logging in the terminal output.

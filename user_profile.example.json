@@ -1,0 +1,106 @@
+{
+  "personal_info": {
+    "name": "Имя",
+    "age": 0,
+    "citizenship": "Страна",
+    "residency": "Страна/город проживания",
+    "family_status": "Семейное положение",
+    "children": [
+      {
+        "name": "Имя ребёнка",
+        "gender": "male",
+        "age": 0,
+        "activities": ["Хобби 1", "Хобби 2"],
+        "strengths": ["Сильные стороны"],
+        "priority": "Приоритеты в воспитании"
+      }
+    ]
+  },
+  "education": {
+    "degrees": [
+      {
+        "field": "Направление",
+        "level": "Уровень"
+      }
+    ],
+    "certifications": ["Сертификат 1"],
+    "future_learning_goals": ["Цель 1"]
+  },
+  "professional_profile": {
+    "total_experience_years": 0,
+    "core_specialization": "Основная специализация",
+    "actuarial_focus": "Дополнительная экспертиза",
+    "ai_skills": "Навыки в AI/автоматизации"
+  },
+  "active_projects": {
+    "project_1": {
+      "status": "Статус",
+      "description": "Описание"
+    }
+  },
+  "lifestyle_and_health": {
+    "sports": [
+      {
+        "type": "Вид спорта",
+        "level": "Уровень",
+        "goal": "Цель"
+      }
+    ],
+    "biohacking": {
+      "focus_areas": ["Направление 1"]
+    },
+    "travel": {
+      "countries_visited": 0,
+      "countries_lived_in": 0
+    }
+  },
+  "cultural_dna": {
+    "literature": "Любимая литература",
+    "music": ["Жанр 1"],
+    "instruments": [
+      {
+        "name": "Инструмент",
+        "level": "Уровень"
+      }
+    ],
+    "arts": "Интересы в искусстве"
+  },
+  "psychology_and_development": {
+    "current_education": "Обучение",
+    "personal_interest": "Интересы"
+  },
+  "investments": {
+    "asset_classes": ["Актив 1"]
+  },
+  "partner_profile": {
+    "name": "Имя партнёра",
+    "age": 0,
+    "education": [
+      {
+        "type": "Тип образования",
+        "institution": "Учебное заведение",
+        "specialty": "Специальность"
+      }
+    ],
+    "career": {
+      "past": "Прошлая карьера",
+      "current": "Текущая карьера"
+    },
+    "children": [
+      {
+        "name": "Имя ребёнка партнёра",
+        "gender": "female",
+        "age": 0,
+        "hobbies": ["Хобби"]
+      }
+    ],
+    "interests": {
+      "culture": ["Культура"],
+      "sports": ["Спорт"],
+      "intellectual": ["Интеллектуальные игры"]
+    },
+    "future_plans": {
+      "action": "Совместные планы"
+    }
+  }
+}
